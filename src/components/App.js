@@ -20,7 +20,7 @@ class App extends React.Component {
   render() {
     const { accordionList } = this.state
     return (
-      <main className="bg-white rounded-lg">
+      <main className="p-4 bg-white rounded-lg">
         <Accordion list={accordionList} />
       </main>
     );

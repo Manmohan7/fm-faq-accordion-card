@@ -15,9 +15,7 @@ const AccordionItem = ({ data, isOpen, toggleItem }) => {
         onClick={() => toggleItem()}
       >{question}</button>
       
-      <div 
-        className="accordion-item-content"
-      >{answer}</div>
+      <div className="accordion-item-content">{answer}</div>
     </div>
   )
 }

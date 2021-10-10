@@ -15,7 +15,10 @@ module.exports = {
         violet: 'hsl(273, 75%, 66%)',
       },
       rotate: {
-        '225': '225deg'
+        '-135': '-135deg'
+      },
+      transitionProperty: {
+        'mh': 'max-height'
       }
     },
   },

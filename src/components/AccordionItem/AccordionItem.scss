@@ -1,19 +1,19 @@
 .accordion-item {
   $item: &;
-  @apply border-b-2 border-blue-light;
+  @apply py-4 border-b-2 border-blue-light;
 
   &-header {
-    @apply relative w-full pr-8 py-4 text-left text-blue-dark;
+    @apply relative w-full pr-8 text-left text-blue-dark;
 
     &:after {
       content: "";
-      @apply h-2 w-2 absolute right-2 top-1/2 transform -translate-y-1/2 rotate-45 border-b-2 border-r-2 border-red;
-      
+      @apply h-2 w-2 absolute right-2 top-1/2 transform -translate-y-1/2 rotate-45 transition-transform duration-300 border-b-2 border-r-2 border-red;
     }
   }
 
   &-content {
-    @apply pr-8 transition h-0 invisible text-blue;
+    @apply pr-8 max-h-0 transition-mh duration-500 text-blue overflow-hidden;
+    transition-timing-function: cubic-bezier(0, 1, 0, 1);
   }
 
   &-active & {
@@ -21,12 +21,13 @@
       @apply font-bold text-desaturated;
 
       &:after {
-        @apply rotate-225;
+        @apply -rotate-135;
       }
     }
 
     &-content {
-      @apply h-full visible pb-4;
+      @apply pt-2 max-h-96 duration-1000;
+      transition-timing-function: cubic-bezier(0.55, 0.09, 0.68, 0.53);
     }
   }
 }

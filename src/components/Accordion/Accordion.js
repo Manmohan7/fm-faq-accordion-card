@@ -1,13 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
-import AccordionItem from "./AccordionItem"
+import "./Accordion.scss"
+import AccordionItem from "../AccordionItem"
 
 class Accordion extends React.Component {
   state = {
     selectedIndex: 2
   }
 
-  toggleAccordionItem(index) {
+  toggleItem(index) {
     const { selectedIndex } = this.state
 
     index = index === selectedIndex
@@ -30,7 +31,7 @@ class Accordion extends React.Component {
             key={index} 
             data={item}
             isOpen={index === selectedIndex}
-            toggleItem={() => this.toggleAccordionItem(index)}
+            toggleItem={() => this.toggleItem(index)}
           />
         ))}
       </div>

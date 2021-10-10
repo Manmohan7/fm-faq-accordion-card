@@ -23,7 +23,7 @@ class App extends React.Component {
       <main className="p-4 bg-white rounded-lg">
         <Accordion list={accordionList} />
       </main>
-    );
+    )
   }
 }
 

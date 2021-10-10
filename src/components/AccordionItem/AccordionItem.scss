@@ -1,0 +1,32 @@
+.accordion-item {
+  $item: &;
+  @apply border-b-2;
+
+  &-header {
+    @apply relative w-full pr-8 py-4 text-left;
+
+    &:after {
+      content: "";
+      @apply absolute right-2 top-1/2 transform -translate-y-1/2 h-2 w-2 border-b-2 border-r-2 rotate-45;
+      
+    }
+  }
+
+  &-content {
+    @apply pr-8 transition h-0 invisible;
+  }
+
+  &-active & {
+    &-header {
+      @apply font-bold;
+
+      &:after {
+        @apply rotate-225;
+      }
+    }
+
+    &-content {
+      @apply h-full visible pb-4;
+    }
+  }
+}

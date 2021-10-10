@@ -25,7 +25,7 @@ class Accordion extends React.Component {
     const { selectedIndex } = this.state
 
     return (
-      <div className="">
+      <div className="accordion">
         {list.map((item, index) => (
           <AccordionItem 
             key={index} 

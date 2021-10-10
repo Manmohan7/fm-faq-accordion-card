@@ -1,24 +1,24 @@
 .accordion-item {
   $item: &;
-  @apply border-b-2;
+  @apply border-b-2 border-blue-light;
 
   &-header {
-    @apply relative w-full pr-8 py-4 text-left;
+    @apply relative w-full pr-8 py-4 text-left text-blue-dark;
 
     &:after {
       content: "";
-      @apply absolute right-2 top-1/2 transform -translate-y-1/2 h-2 w-2 border-b-2 border-r-2 rotate-45;
+      @apply h-2 w-2 absolute right-2 top-1/2 transform -translate-y-1/2 rotate-45 border-b-2 border-r-2 border-red;
       
     }
   }
 
   &-content {
-    @apply pr-8 transition h-0 invisible;
+    @apply pr-8 transition h-0 invisible text-blue;
   }
 
   &-active & {
     &-header {
-      @apply font-bold;
+      @apply font-bold text-desaturated;
 
       &:after {
         @apply rotate-225;

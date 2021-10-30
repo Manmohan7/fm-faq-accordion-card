@@ -1,6 +1,7 @@
 import React from "react";
 import * as API from "../utils/api"
 import Accordion from "./Accordion"
+import ImagePattern from "./ImagePattern"
 
 class App extends React.Component {
   state = {
@@ -20,7 +21,8 @@ class App extends React.Component {
   render() {
     const { accordionList } = this.state
     return (
-      <main className="p-4 bg-white rounded-lg">
+      <main className="pb-16 px-8 bg-white rounded-3xl">
+        <ImagePattern />
         <Accordion list={accordionList} />
       </main>
     )

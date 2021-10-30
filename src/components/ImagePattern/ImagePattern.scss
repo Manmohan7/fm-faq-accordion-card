@@ -1,0 +1,20 @@
+.image-pattern {
+  @apply py-24 relative;
+
+  &-mobile {
+    @apply md:hidden;
+  }
+
+  &-desktop {
+    @apply hidden lg:block;
+  }
+}
+
+.top-layer-mobile {
+  @apply absolute -top-3/4;
+  left: -4%;
+}
+
+.bottom-layer-mobile {
+  @apply absolute top-0 left-1/2 transform -translate-x-1/2;
+}

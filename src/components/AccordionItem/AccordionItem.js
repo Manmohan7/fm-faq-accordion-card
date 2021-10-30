@@ -10,6 +10,7 @@ const AccordionItem = ({ data, isOpen, toggleItem }) => {
       "accordion-item "
       + (isOpen ? "accordion-item-active" : "")
     }>
+      {/* use icon from public/images/ instead of after */}
       <button 
         className="accordion-item-header"
         onClick={() => toggleItem()}
